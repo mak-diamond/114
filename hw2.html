@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/CSS/114.css">
+	<title>CIS 114 Homework 2</title>
+	<style>
+		header, h1{
+			margin: 0;
+			padding: 5%;
+			background-color: black;
+			font-style: normal;
+			font-family: sans-serif;
+			color: white;
+			text-align: center;
+			font-style: bold;
+		
+
+		}
+		.navbar ul {
+  			list-style-type: none;
+ 			margin: 0;
+  			padding: 15px;
+ 			overflow: hidden;
+  			background-color: rgb(128, 247, 138);
+
+		}
+
+		.navbar li {
+  		float: left;
+		font-size: 30px;
+		}
+
+		.navbar li a {
+  		display: block;
+  		color: rgb(12, 7, 7);
+ 		text-align: center;
+ 		padding: 14px 16px;
+  		text-decoration: none;
+		}
+
+/* Change the link color to #111 (black) on hover */
+		.navbar li a:hover {
+  		background-color: rgb(250, 249, 249);
+		}
+		.container ol{
+			background-color: gray;
+			padding: 50px;
+			color: white;
+
+		}
+		.container li{
+			text-align: left;
+			font-style: bold;
+			font-size: 30px;
+		}
+		.container a{
+			color: white;
+			font-style: bold;
+		}
+		section p{
+			color: black;
+			background-color: lightgray;
+			padding: 50px;
+			font-size: 30px;
+			text-align: left;
+			font-family: 'Times New Roman', Times, serif;
+		}
+		.span{
+			background-color: lightblue;
+			padding:30px;
+			width: 200px;
+		}
+		
+		
+	</style>
+	<script>
+		document.write("xy" + "12" + "89");
+	</script>
+	
+</head>
+<body>
+	<header><h1>CIS 114 Homework 2 Page</h1></header>
+	<nav class="navbar">
+		<ul>
+			<li><a href="hw1.html">Home</a></li>
+			<li><a href="hw2.html">HW 2 </a></li>
+			<li><a href="hw3.html">HW 3 </a></li>
+			<li><a href="hw4.html">HW 4 </a></li>
+			<li><a href="hw5.html">HW 5 </a></li>
+			<li><a href="hw6.html">HW 6 </a></li>
+			<li><a href="hw7.html">HW 7 </a></li>
+			<li><a href="hw8.html">HW 8 </a></li>
+
+		</ul>
+	</nav>
+	<div class="container">
+		<ol>
+			<li ><a  href="#part-1">Part 1 - document.write statements</a></li>
+			<li ><a  href="#part2">Part 2 - Input 3 integers </a></li>
+			<li ><a  href=" #"></a></li>
+			<li ><a  href=" #"></a></li>
+		</ol></div>
+
+	
+	<!--2. create identifier for the section you would like to navigate to with "id" = name-->
+	<section id="part-1">
+		<h1>Part 1 - document.Write statements</h1>
+		<p>INSTRUCTION: Create a webpage that contains a script that displays in pairs and strong &#40; bold &#41;, the letters xy <br> and the number 12 and 89 on the
+		same line, with each pair of characters separated by one space. Write the script using document.write statements. Use a font family of <b>Times New Roman</b> and the color 
+		red for the letters xy, a font family of <b>Arial</b> and the  color blue for the the numbers 12 and font family of <b>impact</b>, the color
+		green, and <b>emphasized</b> &#40; in italics &#41; for the numbers 89.</p>
+		<script>
+			
+			document.write("<span style='color:red; font-size:200%; text-align:center; letter-spacing: 5px;'>xy</span><span style='color:blue;  font-size:200%; text-align:center; letter-spacing: 5px;'>12</span><span style='color:green;  font-size:200%; text-align:center; letter-spacing: 5px;'>89</span>");
+		</script>
+	</section>
+	<br><br><br><br><br><br><br><br><br>
+
+
+	<section id="part2">
+		<h1>Part 2 - Input Three integers</h1>
+		<p>INSTRUCTION: Create a webpage that contains a script that inputs three integers via form text boxes and display the sum, average, and 
+			product of the three integers, and the smallest and largest of the three integers. Your result should be displayed using a form textarea or a div element. - <b>DO NOT USE ALERT !!!.</b><br><br><br>
+			You should not present any result if the user does not type NUMBERS in the input boxes !!! An error message should be displayed in this case.
+			if the input from the user are all valid, then present the result and the error message should not be shown anymore! if the user reuses the form and type
+			something invalid, then remove the old result and present the error message instead!
+			<h6>HINTS:</h6>
+			<ul>
+				<li>for finding the smallest and largest number, use the Math Object Methods of min and max</li>
+			</ul><br><br>
+		</p>
+		<h4>Please Submit a numerical value for each of the 3 number boxes.</h4>
+		<form name="form">
+			input a value:
+			<input type="number"id="n1"><br><br>
+			input a value:
+			<input type="number" id="n2"><br><br>
+			input a value:
+			<input type="number" id="n3"><br><br>
+			<input type="button" value="submit" onclick="myfunc()"><br><br><br>
+			The Sum of the 3 values are: <br><br>
+			<input type="number" name="result1"><br><br>
+			The Average of the 3 values are: <br><br>
+			<input type="number" name="result2"><br><br>
+			The product of the 3 values are: <br><br>
+			<input type="number" name="result3"><br><br>
+			The highest Value of the 3 values are <br><br>
+			<input type="number" name="result4"><br><br>
+			The smallest values of the 3 values are: <br><br>
+			<input type="number" name="result5">
+			
+		</form>
+		<script>
+			function myfunc(){
+				let n1 = Number(document.getElementById('n1').innerHTML);
+				let n2 = Number(document.getElementById('n2').innerHTML);
+				let n3 = Number(document.getElementById('n3').innerHTML);
+
+				let sum = n1 + n2  + n3;
+				document.getElementById('result').innerHTML='' ${n1} + ${n2} + ${n3}, equal to ${sum}';
+			}
+		</script>
+
+	</section>
+
+	
+	
+
+	
+	
+	
+	
+</body>
+</html>	
